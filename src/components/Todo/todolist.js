@@ -10,17 +10,15 @@ export default class TodoList extends Component{
 
             ${todos.map(({id, content, active})=> `
             <li data-id="${id}" style=${active ? "text-decoration:line-through;color:gray" : ""}>
-                <input type='checkbox' class='checkbox' ${active ? "checked" : ""}></input>
-                ${content}
+                
+                <input id="c${id}"type='checkbox' class='checkbox' ${active ? "checked" : ""}/>
+                <label for="c${id}"></label>${content}
+                
+                <button class='delbtn'>❌</button>
+                <button class='downbtn'>🔻</button>
+                <button class='upbtn'>🔺</button>
 
-                <button class='delbtn'>DEL</button>
-                <button class='downbtn'>DOWN</button>
-                <button class='upbtn'>UP</button>
-
-            
             </li>
-
-
             `).join('')}
 
             </ul>

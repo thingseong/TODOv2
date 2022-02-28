@@ -87,19 +87,18 @@ div[data-component='todolist'] ul{
 
 div[data-component='todolist'] li{
     text-align: left;
-    zoom: 1.2;
+    zoom: 1.4;
     margin: 5px 0;
     border-bottom: solid grey 1px;
     padding-bottom: 5px;
     padding-top: 5px;
 
 
+
 }
 
 div[data-component='todolist'] li:last-child{
     border: none;
-
-
 }
 
 div[data-component='todolist'] li button{
@@ -107,6 +106,9 @@ div[data-component='todolist'] li button{
     margin: 0px 5px;
     border-radius: 5px;
     border: none;
+}
+div[data-component='todolist'] li button:hover{
+    background-color: rgb(245, 223, 77);
 }
 
 #todoin{
@@ -128,3 +130,31 @@ div[data-component='todolist'] li button{
     position: relative;
     bottom: -25px;
 }
+
+input[type="checkbox"]{
+    margin-right: 10px;
+    display: none;
+}
+input[type="checkbox"] + label{
+    margin-right: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(245, 223, 77);
+    color: gray;
+    position: relative;
+}
+input[type="checkbox"]:checked + label::after{
+    content: '✔';
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
