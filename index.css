@@ -42,3 +42,21 @@ footer[data-component='footer']{
 ul{
     list-style:none;  
 }
+
+div[data-component='todo']{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+div[data-component='todoinput']{
+    margin-left: 10%;
+}
+div[data-component='todolist']{
+    margin-left: 10%;
+}
+div[data-component='todolist'] li{
+    width: 90%;
+    display: inline-block
+}
+div[data-component='todolist'] li button{
+    float:right
+}

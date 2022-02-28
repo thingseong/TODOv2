@@ -6,10 +6,14 @@ import Snackbar from "./snackbar.js";
 
 export default class Todo extends Component{
     setup(){
+        let saved_todos = JSON.parse(localStorage.getItem('todos'));
+        if(saved_todos == null){
+            saved_todos = new Array();
+        }
+
         this.$state ={
             toast:false,
-            todos:[
-            ]
+            todos:saved_todos
         }
     };
     template(){
@@ -21,6 +25,7 @@ export default class Todo extends Component{
     }
     mounted(){
         const {todos, toast, addTodo, delTodo, upTodo, downTodo} = this;
+        localStorage.setItem('todos', JSON.stringify(todos));
 
         const $todoinput = this.$target.querySelector('[data-component="todoinput"]');
         const $todolist = this.$target.querySelector('[data-component="todolist"]');

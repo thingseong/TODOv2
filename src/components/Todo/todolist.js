@@ -12,9 +12,12 @@ export default class TodoList extends Component{
             <li data-id="${id}">
                 <input type='checkbox' class='checkbox'></input>
                 ${content}
-                <button class='upbtn'>UP</button>
-                <button class='downbtn'>DOWN</button>
+                
+                
                 <button class='delbtn'>DEL</button>
+                <button class='downbtn'>DOWN</button>
+                <button class='upbtn'>UP</button>
+
             
             </li>
 
