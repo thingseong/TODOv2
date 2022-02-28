@@ -9,11 +9,10 @@ export default class TodoList extends Component{
             <ul>
 
             ${todos.map(({id, content, active})=> `
-            <li data-id="${id}">
-                <input type='checkbox' class='checkbox'></input>
+            <li data-id="${id}" style=${active ? "text-decoration:line-through;color:gray" : ""}>
+                <input type='checkbox' class='checkbox' ${active ? "checked" : ""}></input>
                 ${content}
-                
-                
+
                 <button class='delbtn'>DEL</button>
                 <button class='downbtn'>DOWN</button>
                 <button class='upbtn'>UP</button>
@@ -28,7 +27,7 @@ export default class TodoList extends Component{
         `;
     }
     setEvent(){
-        const {upTodo, downTodo, delTodo} = this.$props;
+        const {upTodo, downTodo, delTodo, checkTodo} = this.$props;
         this.addEvent('click', '.delbtn', ({target}) => {
             delTodo(target.closest('[data-id]').dataset.id);
         });
@@ -40,5 +39,10 @@ export default class TodoList extends Component{
         this.addEvent('click', '.downbtn', ({target}) => {
             downTodo(target.closest('[data-id]').dataset.id);
         });
+
+        this.addEvent('click', '.checkbox', ({target}) => {
+            checkTodo(target.closest('[data-id]').dataset.id);
+        });
     }
+
 }

@@ -18,13 +18,14 @@ export default class Todo extends Component{
     };
     template(){
         return `
-            <div data-component="todoinput"></div>
+            <span id='title'>WHAT SHOULD I DO?</span>
+            <div data-component="todoinput"></div></br>
             <div data-component="todolist"></div>
             <div data-component="snackbar"></div>
         `;
     }
     mounted(){
-        const {todos, toast, addTodo, delTodo, upTodo, downTodo} = this;
+        const {todos, toast, addTodo, delTodo, upTodo, downTodo, checkTodo} = this;
         localStorage.setItem('todos', JSON.stringify(todos));
 
         const $todoinput = this.$target.querySelector('[data-component="todoinput"]');
@@ -40,6 +41,7 @@ export default class Todo extends Component{
             delTodo: delTodo.bind(this),
             upTodo: upTodo.bind(this),
             downTodo: downTodo.bind(this),
+            checkTodo: this.checkTodo.bind(this),
         });
         new Snackbar($snackbar,{
             toast
@@ -56,7 +58,7 @@ export default class Todo extends Component{
     
     addTodo(content){
         const id = Math.random().toString(36).substr(2, 16);
-        const todo = {id:id, content:content, active: true};
+        const todo = {id:id, content:content, active: false};
         const {todos} = this.$state;
 
         this.setState({
@@ -98,7 +100,10 @@ export default class Todo extends Component{
     checkTodo(id){
         const todos = [ ...this.$state.todos];
         let index = todos.findIndex(t => t.id === id);
-        const todo = this.$state.todos[index];
+    
+        todos[index].active = !(todos[index].active)
+
+        this.setState({todos});
         
     }
 

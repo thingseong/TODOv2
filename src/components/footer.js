@@ -4,8 +4,7 @@ export default class Footer extends Component{
     template(){
         return `
             <div>
-                Made by thingseong
-                <div id='snackbar' hidden></div>
+                <a id='madeby'>Made by thingseong</a>
             </div>
         `;
     }

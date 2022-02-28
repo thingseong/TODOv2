@@ -3,7 +3,7 @@ import Component from "../../core/Component.js";
 export default class TodoInput extends Component{
     template(){
         return `
-            <input size="100%" class='input' type="text" placeholder="todo..."></input>
+            <input id='todoin'size="100%" class='input' type="text" placeholder="todo..."></input>
         `;
     }
     setEvent(){
