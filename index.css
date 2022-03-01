@@ -128,7 +128,7 @@ div[data-component='todolist'] li button:hover{
 }
 #madeby{
     position: relative;
-    bottom: -25px;
+    bottom: -0px;
 }
 
 input[type="checkbox"]{
