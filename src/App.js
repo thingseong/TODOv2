@@ -4,12 +4,15 @@ import Footer from "./components/footer.js";
 import Todo from "./components/Todo/todo.js";
 
 
+
+
 export default class App extends Component{
 
     template(){
         return `
             <header data-component="header"></header>
             <div data-component="todo"></div>
+            <div data-component="routeview"></div>
             <footer data-component="footer"></footer>
         `;
     }

@@ -2,12 +2,10 @@ import Component from "../core/Component.js";
 
 
 export default class Clock extends Component{
-
     setup(){
         this.$state ={
             time : new Date().toLocaleTimeString()
         }
-        
 
     }
 
@@ -20,18 +18,18 @@ export default class Clock extends Component{
         `
     }
 
-    mounted(){
-        
-    }
-
     setEvent(){
+
+
         setInterval(()=>{
+            
             let {time} = this.$state;
             time = new Date().toLocaleTimeString();
             this.setState({time});
         }, 1000);
 
     }
+
 
 
 

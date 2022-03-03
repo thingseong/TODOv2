@@ -2,6 +2,7 @@ body{
     margin: 0px;
 }
 
+
 #snackbar {
     visibility: hidden;
     min-width: 250px;
@@ -107,6 +108,7 @@ div[data-component='todolist'] li button{
     border-radius: 5px;
     border: none;
 }
+
 div[data-component='todolist'] li button:hover{
     background-color: rgb(245, 223, 77);
 }
@@ -123,9 +125,11 @@ div[data-component='todolist'] li button:hover{
     outline: none;
 
 }
+
 #title{
     font-size: 30px;
 }
+
 #madeby{
     position: relative;
     bottom: -0px;
@@ -135,6 +139,7 @@ input[type="checkbox"]{
     margin-right: 10px;
     display: none;
 }
+
 input[type="checkbox"] + label{
     margin-right: 10px;
     display: inline-block;
@@ -146,6 +151,7 @@ input[type="checkbox"] + label{
     color: gray;
     position: relative;
 }
+
 input[type="checkbox"]:checked + label::after{
     content: '✔';
     font-size: 10px;

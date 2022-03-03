@@ -1,6 +1,5 @@
 import Component from "../../core/Component.js";
 
-
 export default class Snackbar extends Component{
     template(){
         const {toast} = this.$props;
@@ -11,3 +10,4 @@ export default class Snackbar extends Component{
         `;
     }
 }
+
