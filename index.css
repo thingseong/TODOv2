@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0px;
 }
@@ -176,3 +179,64 @@ input[type="checkbox"]:checked + label::after{
 }
 
 
+
+
+/* calendar */
+
+#calendar ul{
+    list-style-type: none;
+}
+
+.month{
+    margin-top: 20px;
+    padding: 70px 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(245, 223, 77);
+}
+
+.month .prev{
+    float:left;
+}
+.month .next{
+    float:right;
+}
+.month ul {
+    margin:0;
+    padding:0;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  .days li .active {
+    padding: 5px;
+    background: rgb(245, 223, 77);
+    color: black !important
+  }
