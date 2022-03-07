@@ -1,9 +1,6 @@
 import Component from "./core/Component.js";
-import Header from "./components/header.js";
-import Footer from "./components/footer.js";
-
-
-
+import Header from "./components/Header/header.js";
+import Footer from "./components/Footer/footer.js";
 
 export default class App extends Component{
 
@@ -18,7 +15,6 @@ export default class App extends Component{
         
         const $header = this.$target.querySelector('[data-component="header"]');
         const $footer = this.$target.querySelector('[data-component="footer"]');
-
 
         new Header($header, {});
         new Footer($footer, {});

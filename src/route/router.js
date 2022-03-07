@@ -1,7 +1,5 @@
 import Todo from "../components/Todo/todo.js";
-import Tmp from "../components/tmp.js";
-import Tmp2 from "../components/tmp2.js";
-// import Component from "../core/Component.js";
+import Calendar from "../components/Calendar/calendar.js";
 
 const routes = [
     {
@@ -10,15 +8,11 @@ const routes = [
         component: Todo
     },
     {
-        path:"/tmp",
-        name:"Tmp",
-        component: Tmp
+        path:"/calendar",
+        name:"Calendar",
+        component: Calendar
     },
-    {
-        path:"/tmp2",
-        name:"Tmp2",
-        component: Tmp2
-    }
+
 
 
 ];

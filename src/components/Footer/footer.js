@@ -1,4 +1,4 @@
-import Component from "../core/Component.js";
+import Component from "../../core/Component.js";
 import Clock from "./clock.js";
 
 export default class Footer extends Component{

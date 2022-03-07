@@ -18,7 +18,6 @@ export default class Todo extends Component{
     };
     template(){
         return `
-            <span id='title'>WHAT SHOULD I DO?</span>
             <div data-component="todoinput"></div>
             <div data-component="todolist"></div>
             <div data-component="snackbar"></div>

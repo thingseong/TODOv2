@@ -19,6 +19,7 @@ body{
     font-size: 17px;
 }
 
+
 #snackbar.show {
     visibility: visible;
     background-color: #939597;
@@ -43,6 +44,14 @@ header[data-component='header']{
     height: 100px;
     box-shadow: 0px 0px 10px gray;
 }
+
+header[data-component='header'] button{
+    position: relative;
+    float:right;
+    top:40%;
+}
+
+
 h1{
     position: absolute;
     margin: 0;
@@ -69,6 +78,7 @@ div[data-component='todo']{
     padding-top: 10px;
     text-align: center;
 }
+
 div[data-component='todoinput']{
     text-align: center;
 
@@ -127,6 +137,8 @@ div[data-component='todolist'] li button:hover{
 }
 
 #title{
+
+    text-align: center;
     font-size: 30px;
 }
 
