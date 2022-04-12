@@ -1,0 +1,23 @@
+{
+  "name": "todolist_v2",
+  "version": "1.0.0",
+  "description": "컴포넌트 기반 TODOLIST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thingseong/TODOv2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thingseong/TODOv2/issues"
+  },
+  "homepage": "https://github.com/thingseong/TODOv2#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -4,7 +4,6 @@ export default class Header extends Component{
     template(){
         return `
                 <h1>TODOLIST</h1>
-
                 <button class="gocalendar">Calendar</button>
                 <button class="gotodo">Todo</button>
 
@@ -12,14 +11,10 @@ export default class Header extends Component{
     }
     setEvent(){
         this.addEvent('click', '.gocalendar', ({target}) =>{
-                
-            window.router.push('/calendar')
-
+            window.router.push('/calendar');
         })
         this.addEvent('click', '.gotodo', ({target}) =>{
-                
-            window.router.push('/')
-
+            window.router.push('/');
         })
     }
 }

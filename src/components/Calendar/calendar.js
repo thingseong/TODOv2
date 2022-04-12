@@ -88,12 +88,10 @@ export default class Calendar extends Component{
             }
         }
 
-        console.log(lastday);
 
         for (i = 28; i < lastday; i++){
             days = days + `<li>${i+1}</li>\n`
         }
-        //<li><span class="active">10</span></li>
         return days;
     }
 
